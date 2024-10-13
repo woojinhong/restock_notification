@@ -36,11 +36,12 @@
 
 ### 2 데이터베이스
 https://www.erdcloud.com/d/a7DzpheYFDwmvQHha
+![restockNotification](https://github.com/user-attachments/assets/fdbd0694-fdf5-4b33-a0a2-a558b5f3f1f6)
 
-![restockNotification.png](..%2FrestockNotification.png)
 
 
 ### 3 시스템 아키텍처
-![architechture2.png](..%2Farchitechture2.png)
+
+![architechture2](https://github.com/user-attachments/assets/d6fedfbf-f99a-4998-84ff-77a9119ff677)
 
 
