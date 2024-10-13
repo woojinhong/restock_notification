@@ -27,8 +27,20 @@
 - 설계해야 할 테이블 목록
     - Product (상품)
     - ProductNotificationHistory (상품별 재입고 알림 히스토리)
-    - ProducUserNotification (상품별 재입고 알림을 설정한 유저)
+    - ProductUserNotification (상품별 재입고 알림을 설정한 유저)
     - ProductUserNotificationHistory (상품 + 유저별 알림 히스토리)
 - (Optional) 예외에 의해 알림 메시지 발송이 실패한 경우, manual 하게 상품 재입고 알림 메시지를 다시 보내는 API를 호출한다면 마지막으로 전송 성공한 이후 유저부터 다시 알림 메시지를 보낼 수 있어야 한다.
     - 10번째 유저까지 알림 메시지 전송에 성공했다면, 다음 요청에서 11번째 유저부터 알림 메시지를 전송할 수 있어야 한다.
 - 시스템 구조 상 비동기로 처리 되어야 하는 부분은 존재하지 않는다고 가정합니다.
+
+
+### 2 데이터베이스
+https://www.erdcloud.com/d/a7DzpheYFDwmvQHha
+
+![restockNotification.png](..%2FrestockNotification.png)
+
+
+### 3 시스템 아키텍처
+![architechture2.png](..%2Farchitechture2.png)
+
+
