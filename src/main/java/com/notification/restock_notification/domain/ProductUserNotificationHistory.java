@@ -12,7 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 
-@Table
+@Table(
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"productNotificationHistoryId", "userId"})
+        }
+)
 public class ProductUserNotificationHistory extends TimeStamped{
 
     @Id
