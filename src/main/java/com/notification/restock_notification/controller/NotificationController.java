@@ -1,8 +1,6 @@
 package com.notification.restock_notification.controller;
 
-import com.notification.restock_notification.domain.Product;
-import com.notification.restock_notification.domain.ProductUserNotification;
-import com.notification.restock_notification.service.ProductUserNotificationService;
+import com.notification.restock_notification.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,12 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
-public class ProductUserNotificationController {
+public class NotificationController {
 
-    private final ProductUserNotificationService service;
+    private final NotificationService service;
 
-    @PostMapping("/products/{productId}/notifications/re-stock")
+    // 재입고 알림 전송 API
+    @PostMapping("/{productId}/notifications/re-stock")
     public ResponseEntity<?> sendNotify(@PathVariable Long productId){
         return service.sendNotify(productId);
     }
+
+    // 재입고 알림 전송 API (manual)
 }
