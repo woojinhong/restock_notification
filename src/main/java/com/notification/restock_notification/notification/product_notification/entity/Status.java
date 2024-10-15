@@ -1,4 +1,4 @@
-package com.notification.restock_notification.domain;
+package com.notification.restock_notification.notification.product_notification.entity;
 
 /*
 - IN_PROGRESS (발송 중)

@@ -1,6 +1,6 @@
-package com.notification.restock_notification.controller;
+package com.notification.restock_notification.notification.product_notification.controller;
 
-import com.notification.restock_notification.service.NotificationService;
+import com.notification.restock_notification.notification.product_notification.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

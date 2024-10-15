@@ -1,0 +1,7 @@
+package com.notification.restock_notification.notification.product_user_notification.repository;
+
+import com.notification.restock_notification.notification.product_user_notification.entity.ProductUserNotificationHistory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductUserNotificationHistoryRepoistory extends JpaRepository<ProductUserNotificationHistory, Long> {
+}

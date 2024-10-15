@@ -1,5 +1,7 @@
-package com.notification.restock_notification.domain;
+package com.notification.restock_notification.notification.product_notification.entity;
 
+import com.notification.restock_notification.common.entity.TimeStamped;
+import com.notification.restock_notification.product.entity.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -53,4 +55,14 @@ public class ProductNotificationHistory extends TimeStamped {
     // 재입고 회차
     @Column(nullable = false)
     private int restockVer;
+
+    public void changeStatus(Status status) {
+        this.status = status;
+    }
+
+    public ProductNotificationHistory(Product product, Status status, int restockVer) {
+        this.product = product;
+        this.status = status;
+        this.restockVer = restockVer;
+    }
 }

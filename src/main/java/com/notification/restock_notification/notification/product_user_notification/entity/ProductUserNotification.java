@@ -1,5 +1,6 @@
-package com.notification.restock_notification.domain;
+package com.notification.restock_notification.notification.product_user_notification.entity;
 
+import com.notification.restock_notification.product.entity.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,9 +11,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
+@Access(AccessType.FIELD)
 @Table(
         uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"product_id", "restock_ver", "user_id"})
+                @UniqueConstraint(columnNames = {"product_id", "user_id"})
         }
 )
 public class ProductUserNotification {
@@ -27,13 +29,18 @@ public class ProductUserNotification {
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
-    @Column(nullable = false)
-    private int restockVer;
-
     // 알림 신청 여부
     @Column(nullable = false)
     private boolean hasSubscribed;
 
+
+    // testcase 용
+    public ProductUserNotification(Long userId, Product product, boolean hasSubscribed) {
+        this.userId = userId;
+        this.product = product;
+
+        this.hasSubscribed = hasSubscribed;
+    }
 
 
 }

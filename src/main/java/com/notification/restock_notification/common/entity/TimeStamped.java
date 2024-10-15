@@ -1,4 +1,4 @@
-package com.notification.restock_notification.domain;
+package com.notification.restock_notification.common.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
