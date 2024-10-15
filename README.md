@@ -38,6 +38,20 @@
 https://www.erdcloud.com/d/a7DzpheYFDwmvQHha
 ![restockNotification](https://github.com/user-attachments/assets/fdbd0694-fdf5-4b33-a0a2-a558b5f3f1f6)
 
+- **ProductUserNotification**을 처음 설계할 때 재입고 회차를 고려한 이유?
+
+특정 한정판 상품의 경우 재입고 회차별 유저 알림 설정을 따로 관리해야 한다고 판단
+예) 동일 상품 A
+1회차 크리스마스 한정판 (2023년)
+2회차 크리스마스 한정판 (2024년)
+회차별 알림 관리가 필요하다 판단 
+
+- **문제점**
+  - 이벤트성 상품과 일반 상품을 동일한 방식으로 모두 회차별로 알림을 관리하면 불필요한 데이터 낭비
+
+- **해결점**
+  - 회차별로 알림을 관리해야할 필요가 있는 데이터는 개별 DB로 관리, HOWEVER, 이번 과제에서는 과감히 포기
+
 
 
 ### 3 시스템 아키텍처
